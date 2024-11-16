@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_DB: dbcrawlerxemay
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
